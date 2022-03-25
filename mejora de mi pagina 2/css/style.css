@@ -1,0 +1,462 @@
+::-webkit-scrollbar{
+    width: 12px;
+}
+
+::-webkit-scrollbar-thumb{
+    background: linear-gradient(transparent,aqua);
+    border-radius: 6px;
+
+}
+
+::-webkit-scrollbar-thumb:hover{
+    background: linear-gradient(transparent,#00ffbf);
+}
+
+.scrollPath{
+    position:fixed;
+    top: 0;
+    right: 0;
+    width: 10px;
+    height: 100%;
+    background: rgba(255, 255, 255,0.05);
+}
+/* .progressbar{
+    position:fixed;
+    top: 0;
+    right: 0;
+    width: 10px;
+    height: 100%;
+    background: linear-gradient(to top,#008aff,#00ffe7);
+    animation: anime 5s linear infinite;   
+}
+
+@keyframes animate{
+    0%,100%
+    {
+        filter: hue-rotate(0deg);
+    }
+    50%
+    {
+        filter: hue-rotate(360deg);
+    }
+}
+#progressbar::before{
+    content:´´;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(to top,#008aff,#00ffe7);
+    filter: blur(30px);
+}
+
+#progressbar::after{
+    content:´´;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(to top,#008aff,#00ffe7);
+    filter: blur(30px);
+} */
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+.btn-home{
+    position: fixed;
+    width: 55px;
+    height: 55px;
+    line-height: 55px;
+    bottom: 30px;
+    right: 30px;
+    background: #191c32;
+    color: aqua;
+    border-radius: 50px;
+    text-align: center;
+    font-size: 30px;
+    box-shadow: 0px 1px 10px rgba(0, 0, 0, 3);
+}
+.btn-home:hover{
+    text-decoration: none;
+    color: #191c32;
+    background: aqua;
+}
+
+
+body{
+    font-family: 'Oswald', sans-serif;
+    overflow-x: hidden;
+}
+
+.wrapper {
+    width: 100vw;
+    height: 100vh;
+    background: #191c32;
+    color: #fff;
+}
+.logo   {
+    color: azure;
+    text-decoration: none;
+}
+
+.navbar{
+    display: flex;
+    justify-content: space-between;
+    padding: 2em;
+}
+
+.brand{
+    margin-top: -7px;
+}
+
+.brand span {
+    color: aqua;
+}
+
+.menu{
+    display: flex;
+    width: 50%;
+    justify-content: space-around;
+}
+
+.menu li{
+    list-style: none;
+}
+
+.menu a{
+    color: #fff;
+    text-decoration: none;
+    padding: 10px 20px;
+}
+
+.menu .active{
+    color: aqua;
+}
+
+.menu a:hover{
+    background: aqua;
+    color: #191c32;
+    transition: ease-in .4s;
+}
+
+.main{
+    margin: 0 auto;
+    width: 80vw;
+    height: 80vh;
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    align-items: center;
+    gap:2em;
+}
+h1{
+    font-size: 3em;
+}
+.info-content span{
+    color: aqua;
+}
+
+.zoom:hover{
+    transform: scale(1.2);
+    transition: all 500ms ease;
+}
+
+.download-cv,
+.project-details-button{
+    padding: 10px 20px;
+    background-color: aqua;
+    border: none;
+    border-radius: 20px;
+    margin-top: 10px;
+    cursor: pointer;
+    -webkit-box-shadow:1px 3px 11px -5px rgba(102,231,200,0,69) ;
+    box-shadow: 1px 3px 11px -5px rgba(102, 231, 200, .69)
+}
+.download-cv:hover{
+    background-color:azure;
+    box-shadow: none;
+}
+.main img{
+    width: 500px;
+    border: 7px solid aqua;
+    height: 530px;
+    z-index: 1;
+}
+.main img:hover{
+    transform: scale(1.2);
+    transition: all 500ms ease;
+}
+.about,
+.container-contact{
+    display: grid;
+    grid-template-columns: repeat(10,1fr);
+    width: 100vw;
+    align-items: center;
+}
+
+.about img{
+    width: 100%;
+    grid-column: 1/5;
+}
+.about-info{
+    grid-column: 5/10;
+    padding: 3em;
+}
+.about-info a{
+    text-decoration: none;
+    color: #191c32;
+}
+.about-info h2{
+    font-size: 2em;
+    color: #191c32; 
+}
+
+.divider{
+    height: 4px;
+    width: 60px;
+    background-color: aqua;
+    margin-top: 5px;
+    margin-bottom: 2em;
+    margin-left: 55px;
+}
+.about p{
+    margin-bottom: 1em;
+}
+
+.portfolio,
+.contact-section{
+    width: 100vw;
+    background-color: #191c32;
+    color: #fff;
+}
+
+.portfolio-headings{
+    width: 100vw;
+    padding: 5em;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.portfolio-headings h2,
+.contact-heading h2{
+    font-size: 2.5em;
+}
+
+.contact-heading h2{
+    margin-left: 50px;
+}
+
+.portfolio .container{
+    width: 80vw;
+    height: 80vh;
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+}
+
+.card {
+    width: 300px;
+    background-color: #29316e;
+    color: #fff;
+    height: 350px;
+    margin: 1em;
+    text-align: center;
+}
+
+.card__img1{
+    width: 100%;
+    height: 150px;
+    background-image: url(../imagenes/coderhouse.jpg);
+    background-size: cover;
+}
+
+.card__img2{
+    width: 100%;
+    height: 150px;
+    background-image: url(../imagenes/fce.jpg);
+    background-size: cover;
+}
+
+.card__img3{
+    width: 100%;
+    height: 150px;
+    background-image: url(../imagenes/udemy-logo-dark-background.jpg);
+    background-size: cover;
+}
+
+.card__title{
+    padding: 20px;
+}
+.card__project-links{
+    display: flex;
+    justify-content: space-evenly;
+}    
+.card__project-links a{
+    color: #fff;
+    text-decoration: none;
+}
+.card__project-links i{
+    font-size: 1.5em;
+}
+.card .project-details{
+    margin: 0 auto;
+    margin: 1em;
+    width: 70%;
+    
+}
+.container .project-details a{
+    text-decoration: none;
+    color: #191c32;
+    text-transform: uppercase;
+}
+
+.proyect-details-content{
+    display: flex;
+    width: 100%;
+    justify-content: center;
+    margin-top: 1em;
+    text-align:center;
+}
+
+.contact-section{
+    background-color: #191c32;
+    display: flex;
+}
+
+.button-content{
+    display: flex;
+    justify-content: center;
+    margin: 1em;
+}
+
+.project-details-button a{
+    text-decoration: none;
+    color: #191c32;
+}
+
+.contact-hedings h2{
+    font-size: 3em;
+}
+
+.container-contact{
+    padding: 3em;
+    margin: 0 auto; 
+}
+
+.container-contact img{
+    width: 750px;
+    height: 700px;
+    bottom: 0px;
+}
+
+.form{
+    display: flex;
+    flex-direction: column;
+    width: 30vw;
+    margin-top: 2em;
+}
+ 
+.form input{
+    padding: 10px 20px;
+    margin-bottom: 1em;
+    background: none;
+    border: none;
+    border-bottom: 1px solid #fff;
+    color: #fff;
+}
+
+.form textarea{
+    height:150px;
+    background: none;
+    border: none;
+    color: #fff;
+    padding: 1.5em;
+    border: 1px solid #fff;
+
+}
+.btn-submit{
+    padding:10px 20px;
+    margin:1em;
+    border:none;
+    text-transform: uppercase;
+    background-color: aqua;
+    border-radius: 15px;
+    cursor: pointer;
+    box-shadow: 1px 3px 11px -5px rgba(102, 231, 200, .69)
+}
+.btn-submit:hover{
+    background-color: #fff;
+    box-shadow: none;
+}
+.footer{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100vw;
+    height: 200px;
+    background-color: aqua;
+}
+.footer-content h2{
+    font-size: 3em;
+}
+.arriba{
+    text-decoration: none;
+    color:#191c32;
+    font-size: 1.5em;
+    text-align: center;
+}
+
+.footer-content h5,
+.social-network i{
+    font-size: 1.5em;
+    text-align: center;
+}
+.social-network{
+    display: flex;
+    justify-content: space-evenly;
+    width: 300px;
+    margin-top: 1em;
+}
+.en{
+    color: #00ffbf;
+}
+.es{
+    color: #00ffbf;
+}
+.check{
+    position: relative;
+    width: 50px;
+}
+.check:before{
+    content: "";
+    position: absolute;
+    width: 50px;
+    height: 25px;
+    background: #333;
+    border-radius: 25px;
+}
+.check:after{
+    content: "";
+    position: absolute;
+    width: 25px;
+    height: 25px;
+    background:#fff;
+    border-radius: 25px;
+    transition: 0.25s;
+    border:2px solid #333;
+    box-sizing:border-box;
+}
+.check:checked:after{
+    left:25px;
+    border:2px solid #00ffbf;
+}
+.check:checked:before{
+    background: #00ffbf;
+}
